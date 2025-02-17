@@ -18,5 +18,5 @@ public class Picture extends GraphicalObject {
     public void draw(DrawTool drawTool) {
         drawTool.drawImage(getMyImage(),x,y);
     }
-
+//ghgfhjdgufzufzufifzu
 }
