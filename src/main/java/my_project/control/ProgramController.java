@@ -2,11 +2,14 @@ package my_project.control;
 
 import KAGO_framework.control.SoundController;
 import KAGO_framework.control.ViewController;
+import KAGO_framework.model.Sound;
+import KAGO_framework.view.DrawTool;
 import my_project.model.Picture;
 import my_project.model.Player;
 import my_project.model.StartBackground;
 import my_project.view.InputManager;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 
 /**
@@ -61,9 +64,11 @@ public class ProgramController {
 
         // Spielbildschirm (Szene 1)
         viewController.createScene();
+        viewController.draw(sback,1);
         p1 = new Player(50,300);
         viewController.draw(p1,1);
-
+        viewController.getSoundController().loadSound("src/main/resources/sound/bgm_startScreen.mp3", "startBGM", true);
+        SoundController.playSound("startBGM");
         // Endbildschirm (Szene 2)
     }
 
